@@ -61,11 +61,21 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        '''</summary>
+        Friend ReadOnly Property icons8_app_symbol_2() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_app_symbol_2", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property icons8_user_account_64px() As System.Drawing.Bitmap
+        Friend ReadOnly Property icons8_app_symbol_50px_1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8_user_account_64px", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_app_symbol_50px_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -106,16 +116,6 @@ Namespace My.Resources
         Friend ReadOnly Property land_AspectRatio_4_3() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("land_AspectRatio_4_3", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property novacapta() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("novacapta", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

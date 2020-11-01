@@ -77,6 +77,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icons8_app_symbol_2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -299,6 +302,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_app_symbol_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_app_symbol_50px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\HarfBuzzSharp.2.6.1.7\build\net462\HarfBuzzSharp.targets" Condition="Exists('..\packages\HarfBuzzSharp.2.6.1.7\build\net462\HarfBuzzSharp.targets')" />

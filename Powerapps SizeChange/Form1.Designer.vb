@@ -26,6 +26,7 @@ Partial Class Form1
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.btn_choose_File = New MetroSet_UI.Controls.MetroSetButton()
         Me.StyleManager1 = New MetroSet_UI.StyleManager()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
@@ -47,7 +48,6 @@ Partial Class Form1
         Me.cbx_desktop_tablet = New MetroSet_UI.Controls.MetroSetRadioButton()
         Me.cbx_phone = New MetroSet_UI.Controls.MetroSetRadioButton()
         Me.lbl_size = New MetroSet_UI.Controls.MetroSetLabel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Timer_abfrage = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.dgv_old_properties = New System.Windows.Forms.DataGridView()
@@ -55,15 +55,17 @@ Partial Class Form1
         Me.col_old_Value = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_new_value = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_change_file_properties = New MetroSet_UI.Controls.MetroSetButton()
+        Me.MetroSetControlBox1 = New MetroSet_UI.Controls.MetroSetControlBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.txb_custom_width, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txb_custom_height, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pn_custom.SuspendLayout()
         Me.pn_orientation.SuspendLayout()
         Me.MetroSetPanel1.SuspendLayout()
         Me.pn_apptype.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.dgv_old_properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_choose_File
@@ -366,18 +368,6 @@ Partial Class Form1
         Me.lbl_size.ThemeAuthor = "Narwin"
         Me.lbl_size.ThemeName = "MetroDark"
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.White
-        Me.Guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(9, 9)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(335, 145)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 11
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'Timer_abfrage
         '
         Me.Timer_abfrage.Enabled = True
@@ -465,18 +455,58 @@ Partial Class Form1
         Me.btn_change_file_properties.ThemeAuthor = "Narwin"
         Me.btn_change_file_properties.ThemeName = "MetroDark"
         '
+        'MetroSetControlBox1
+        '
+        Me.MetroSetControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MetroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.MetroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White
+        Me.MetroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray
+        Me.MetroSetControlBox1.DisabledForeColor = System.Drawing.Color.Silver
+        Me.MetroSetControlBox1.Location = New System.Drawing.Point(709, 5)
+        Me.MetroSetControlBox1.MaximizeBox = False
+        Me.MetroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.MetroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray
+        Me.MetroSetControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray
+        Me.MetroSetControlBox1.MinimizeBox = True
+        Me.MetroSetControlBox1.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.MetroSetControlBox1.MinimizeHoverForeColor = System.Drawing.Color.Gray
+        Me.MetroSetControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray
+        Me.MetroSetControlBox1.Name = "MetroSetControlBox1"
+        Me.MetroSetControlBox1.Size = New System.Drawing.Size(100, 25)
+        Me.MetroSetControlBox1.Style = MetroSet_UI.Design.Style.Dark
+        Me.MetroSetControlBox1.StyleManager = Me.StyleManager1
+        Me.MetroSetControlBox1.TabIndex = 26
+        Me.MetroSetControlBox1.Text = "MetroSetControlBox1"
+        Me.MetroSetControlBox1.ThemeAuthor = "Narwin"
+        Me.MetroSetControlBox1.ThemeName = "MetroDark"
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.White
+        Me.Guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(9, 9)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(335, 145)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 11
+        Me.Guna2PictureBox1.TabStop = False
+        '
         'Form1
         '
+        Me.AllowResize = False
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(824, 561)
+        Me.Controls.Add(Me.MetroSetControlBox1)
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.Controls.Add(Me.MetroSetPanel1)
         Me.Controls.Add(Me.btn_change_file_properties)
         Me.Controls.Add(Me.btn_choose_File)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.ShowLeftRect = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -492,9 +522,9 @@ Partial Class Form1
         Me.pn_orientation.ResumeLayout(False)
         Me.MetroSetPanel1.ResumeLayout(False)
         Me.pn_apptype.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2GroupBox1.ResumeLayout(False)
         CType(Me.dgv_old_properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -528,4 +558,5 @@ Partial Class Form1
     Friend WithEvents pn_apptype As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents cbx_desktop_tablet As MetroSet_UI.Controls.MetroSetRadioButton
     Friend WithEvents cbx_phone As MetroSet_UI.Controls.MetroSetRadioButton
+    Friend WithEvents MetroSetControlBox1 As MetroSet_UI.Controls.MetroSetControlBox
 End Class

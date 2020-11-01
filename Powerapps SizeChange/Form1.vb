@@ -8,6 +8,12 @@ Imports Syncfusion.Windows.Forms.Tools
 
 Public Class Form1
 
+    Public Const WM_NCLBUTTONDBLCLK As Integer = &HA3
+    Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
+        If m.Msg = WM_NCLBUTTONDBLCLK Then Return
+        MyBase.WndProc(m)
+    End Sub
+
     Dim NewlistofScreen As New List(Of Screen) From {
         New Screen With {.Orientation = "landscape", .Size_Name = "16:9 (default)", .Size_Value = New Size(1366, 768), .Thumb = My.Resources.land_AspectRatio_16_9},
         New Screen With {.Orientation = "landscape", .Size_Name = "3:2 (Surface Pro 3)", .Size_Value = New Size(1152, 768), .Thumb = My.Resources.land_AspectRatio_3_2},
